@@ -23,7 +23,7 @@ def answer(message)
 	elsif message.text == 'Какой сегодня день недели?'
 		Date.mday
 	elsif message.text == 'Сколько времени будет через час?'
-		Date.mday
+		"Сейчас #{Time.new}"
 	else
 		ANSWERS.sample
 	end
