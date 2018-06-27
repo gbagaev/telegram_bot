@@ -19,11 +19,11 @@ def answer(message)
 	elsif message.text == 'Кто твой автор?'
 		'Это конфиденциальная информация'
 	elsif message.text == 'Сколько времени?'
-		"Сейчас #{Time.new.strftime("%H:%M:%S")}"
+		"Сейчас #{Time.new.strftime("%H:%M:%S")}"	
 	elsif message.text == 'Какой сегодня день недели?'
-		"Сейчас #{Time.new.strftime("%d")}"
+		"Сейчас #{Time.new.strftime("%A")}"
 	elsif message.text == 'Сколько времени будет через час?'
-		"Сейчас #{Time.new.strftime("%H:%M:%S")}"
+		"Сейчас #{(Time.new + 3600).strftime("%H:%M:%S")}"
 	else
 		ANSWERS.sample
 	end
