@@ -19,7 +19,7 @@ def answer(message)
 	elsif message.text == 'Кто твой автор?'
 		'Это конфиденциальная информация'
 	elsif message.text == 'Сколько времени?'
-		"Сейчас #{Time.now}"
+		"Сейчас #{Time.now.to_time}"
 	elsif message.text == 'Какой сегодня день недели?'
 		Date.mday
 	elsif message.text == 'Сколько времени будет через час?'
