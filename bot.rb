@@ -14,6 +14,16 @@ ANSWERS = [
 def answer(message)
 	if message.text == '/start'
 		"Hello, #{message.from.first_name}!"
+	elsif message.text == 'На каком языке ты написан?'
+		'На Ruby'
+	elsif message.text == 'Кто твой автор?'
+		'Это конфиденциальная информация'
+	elsif message.text == 'Сколько времени?'
+		Date.now
+	elsif message.text == 'Какой сегодня день недели?'
+		Date.mday
+	elsif message.text == 'Сколько времени будет через час?'
+		Date.mday
 	else
 		ANSWERS.sample
 	end
