@@ -19,11 +19,11 @@ def answer(message)
 	elsif message.text == 'Кто твой автор?'
 		'Это конфиденциальная информация'
 	elsif message.text == 'Сколько времени?'
-		"Сейчас #{Time.new.strftime("%H часа %M минут %S")}"	
+		"Сейчас #{Time.new.strftime("%H:%M:%S") + Time.zone_offset('PDT')}"	
 	elsif message.text == 'Какой сегодня день недели?'
-		"Сегодня #{Time.new.strftime("%A")}"
+		"Сегодня #{Time.new.strftime("%A")}. Ничего, что я с Вами по-английски?"
 	elsif message.text == 'Сколько времени будет через час?'
-		"Через час будет #{(Time.new + 3600).strftime("%H:%M:%S")}"
+		"Через час будет #{(Time.new + 3600).strftime("%H:%M:%S")  + Time.zone_offset('PDT')}"
 	else
 		ANSWERS.sample
 	end
