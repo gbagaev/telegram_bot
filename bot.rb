@@ -13,7 +13,7 @@ ANSWERS = [
 
 def answer(message)
 	case message.text
-	when 'Привет' 
+	when 'Привет'
 	 "Привет, #{message.from.first_name}!"
 	when 'На каком языке ты написан?' 
 	 'На Ruby'
