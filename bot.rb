@@ -14,7 +14,7 @@ ANSWERS = [
 def answer(message)
 	message = message.text
 	case message
-	when '/Привет' then "Привет, #{message.from.first_name}!"
+	when 'Привет!' then "Привет, #{message.from.first_name}!"
 	when 'На каком языке ты написан?' then 'На Ruby'
 	when 'Кто твой автор?' then 'Это конфиденциальная информация'
 	when 'Сколько времени?' then "Сейчас #{Time.new.strftime("%H:%M:%S")}"
