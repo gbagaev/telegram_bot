@@ -13,12 +13,18 @@ ANSWERS = [
 
 def answer(message)
 	case message.text
-	when 'Привет' then "Привет, #{message.from.first_name}!"
-	when 'На каком языке ты написан?' then 'На Ruby'
-	when 'Кто твой автор?' then 'Это конфиденциальная информация'
-	when 'Сколько времени?' then "Сейчас #{Time.new.strftime("%H:%M:%S")}"
-	when 'Какой сегодня день недели?' then "Сегодня #{Time.new.strftime("%A")}. Ничего, что я с Вами по-английски?"
-	when 'Сколько времени будет через час?' then "Через час будет #{(Time.new + 3600).strftime("%H:%M:%S")}"
+	when 'Привет' 
+	 "Привет, #{message.from.first_name}!"
+	when 'На каком языке ты написан?' 
+	 'На Ruby'
+	when 'Кто твой автор?' 
+	 'Это конфиденциальная информация'
+	when 'Сколько времени?' 
+	 "Сейчас #{Time.new.strftime("%H:%M:%S")}"
+	when 'Какой сегодня день недели?' 
+	 "Сегодня #{Time.new.strftime("%A")}. Ничего, что я с Вами по-английски?"
+	when 'Сколько времени будет через час?' 
+	 "Через час будет #{(Time.new + 3600).strftime("%H:%M:%S")}"
 	else
 		ANSWERS.sample
 	end
