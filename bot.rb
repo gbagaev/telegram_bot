@@ -24,25 +24,6 @@ def answer(message)
 	end
 end
 
-# def answer(message)
-# 	if message.text == '/start'
-# 		"Hello, #{message.from.first_name}!"
-# 	elsif message.text == 'На каком языке ты написан?'
-# 		'На Ruby'
-# 	elsif message.text == 'Кто твой автор?'
-# 		'Это конфиденциальная информация'
-# 	elsif message.text == 'Сколько времени?'
-# 		"Сейчас #{Time.new.strftime("%H:%M:%S")}"	
-# 	elsif message.text == 'Какой сегодня день недели?'
-# 		"Сегодня #{Time.new.strftime("%A")}. Ничего, что я с Вами по-английски?"
-# 	elsif message.text == 'Сколько времени будет через час?'
-# 		"Через час будет #{(Time.new + 3600).strftime("%H:%M:%S")}"
-# 	else
-# 		ANSWERS.sample
-# 	end
-# end
-
-			
 Telegram::Bot::Client.run(TOKEN) do |bot|
 	bot.listen do |message|
 		puts message.from
