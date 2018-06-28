@@ -12,8 +12,7 @@ ANSWERS = [
 ]
 
 def answer(message)
-	messages = message.text
-	case message
+	case message.text
 	when 'Привет' then "Привет, #{message.from.first_name}!"
 	when 'На каком языке ты написан?' then 'На Ruby'
 	when 'Кто твой автор?' then 'Это конфиденциальная информация'
