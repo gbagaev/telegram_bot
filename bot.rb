@@ -24,13 +24,12 @@ def answer(message)
 		"Сегодня #{Time.new.strftime("%A")}. Ничего, что я с Вами по-английски?"
 	elsif message.text == 'Сколько времени будет через час?'
 		"Через час будет #{(Time.new + 3600).strftime("%H:%M:%S")}"
-	elsif message.text == 'Стаса знаешь?'
-		'Кто же этого жопашника не знает!'
 	else
 		ANSWERS.sample
 	end
 end
 
+			
 Telegram::Bot::Client.run(TOKEN) do |bot|
 	bot.listen do |message|
 		puts message.from
